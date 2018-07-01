@@ -1,0 +1,74 @@
+h1, h2, h3 {
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+.heading {
+    &-1 {
+        font-size: 300%;
+        font-weight: 300;
+        letter-spacing: 1px;
+
+        &--name {
+            font-size: 500%;
+            font-family: 'Pacifico', 'Arial', sans-serif;
+            background: linear-gradient(110deg, #ffeead 33%, rgba(0, 0, 0, 0) 33%), linear-gradient(110deg, #C5E7D7 34%, #88d8b0 34%);            -webkit-background-clip: text;
+            background-size: 400%;
+            color: transparent;
+            animation: name 10s ease infinite;
+        }
+    }
+
+
+    &-2 {
+        font-size: 2.5rem;
+        font-weight: 300;
+
+    }
+}
+
+
+.section-about {
+    position: relative;
+    height: 100vh;
+
+    &__title {
+        margin-top: 8rem;
+        text-align: center;
+
+    }
+}
+
+
+.text {
+    border-bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.text.hidden li {
+    border-bottom: 1px solid #000;
+}
+
+.text li {
+    display: inline-block;
+    float: left;
+    font-weight: 300;
+    font-size: 2em;
+    color: #333;
+    opacity: 1;
+    transition: all 0.5s ease-in-out;
+    max-width: 2em;
+}
+.text.hidden li.spaced {
+    padding-left: 0;
+}
+.text li.spaced {
+    padding-left: 0.5em;
+}
+
+.text.hidden li.ghost {
+    opacity: 0;
+    max-width: 0;
+}

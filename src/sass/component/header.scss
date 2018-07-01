@@ -1,0 +1,28 @@
+.header {
+    position: relative;
+
+    &__nav {
+
+
+    }
+
+    &__content-box {
+        position: absolute;
+        left: 50%;
+        top: 40%;
+        transform: translate(-50%, -50%);
+        color: aliceblue;
+        animation: moveInRight 1.5s ease;
+
+        & p {
+            text-transform: uppercase;
+            font-size: 150%;
+            font-weight: 400;
+            height: 2rem;
+            letter-spacing: 1px;
+            padding-left: 30%;
+        }
+
+    }
+}
+

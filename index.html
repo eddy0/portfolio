@@ -4,13 +4,151 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="src/css/index.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,300i,400" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
     <title>this is the portolio page for what I learned</title>
 </head>
 <body>
 <header class="header">
-    <img src="./src/img/bg1.jpg" alt="header_background">
-
+    <nav class="header__nav nav">
+    
+    </nav>
+    <div class="header__content-box ">
+        <h1 class="heading-1--name margin-bottom--sm">Eddy zhang</h1>
+        <p class="show">web developer</p>
+    </div>
 </header>
+
+
+<section class=" section-about">
+    <h2 class="row section-about__title heading-2">
+        <ul class="text hidden">
+            <li>I</li>
+            <li class="ghost spaced">A</li>
+            <li class="ghost">M</li>
+            <li class="ghost spaced">A</li>
+            <li class="spaced">D</li>
+            <li class="ghost">E</li>
+            <li class="ghost">v</li>
+            <li class="ghost">E</li>
+            <li class="ghost">L</li>
+            <li class="ghost">O</li>
+            <li class="ghost">P</li>
+            <li class="ghost">E</li>
+            <li class="ghost">R</li>
+        </ul>
+    </h2>
+    
+
+</section>
+
+
+<script>
+    
+    const scroll = function() {
+        let section = document.querySelector('.section-about')
+        let text = document.querySelector('.text')
+        window.addEventListener('scroll', (event) => {
+            console.log(window.scrollY ,window.innerHeight, section.offsetHeight)
+            if (window.scrollY + 50  >= section.offsetHeight && window.scrollY   <= section.offsetHeight + 100  ) {
+               
+                text.classList.remove('hidden')
+            
+            } else {
+                text.classList.add('hidden')
+            }
+      
+        })
+        
+    }
+    
+</script>
+
+<script>
+    class TextEffect {
+        constructor({
+                        className,
+                        words,
+                        interval,
+                        delay,
+                        positive = true
+                    }) {
+            this.className = className
+            this.words = words
+            this.interval = interval || 100
+            this.delay = delay || 500
+            this.positive = positive
+            this.init()
+        }
+        init() {
+            if (!Array.isArray(this.words)) {
+                alert('pls use array & more then one item')
+                return
+            }
+            this.box = document.querySelector(`.${this.className}`)
+            this.box.innerHTML = ''
+            this.start()
+        }
+        start() {
+            let count = 0
+            let text = this.words[count]
+            let positive = this.positive
+            let i = this.positive ? 0 : text.length
+            this.animation = setInterval(() => {
+                // 正向
+                if (positive) {
+                    if (i < text.length) {
+                        text = this.words[count]
+                        let word = text[i]
+                        this.box.insertAdjacentHTML('beforeend', word)
+                        i++
+                    }
+                    if (i === text.length) {
+                            positive = !positive
+                    }
+                } else {
+                    if (i <= text.length) {
+                        let word = text.slice(0, i)
+                        this.box.innerText = ''
+                        this.box.insertAdjacentHTML('beforeend', word)
+                        i--
+                    }
+                    if (i < 0) {
+                        // reset i
+                        i = 0
+                        // reset count
+                        if (count < this.words.length - 1) {
+                            count += 1
+                        } else {
+                            count = 0
+                        }
+                        setTimeout(() => {
+                            positive = true
+                        }, this.delay)
+                    }
+                }
+            }, this.interval)
+        }
+    }
+</script>
+<script>
+    /**
+     * config 必须提供 className 和 words, words 为一个 array
+     */
+    const __main = () => {
+        let config = {
+            className: 'show',
+            words: ['web developer','inspiration', 'creative', 'hardworking'],
+            interval: 150,
+            delay: 800,
+            positive: true
+        }
+        new TextEffect(config)
+        scroll()
+    }
+    __main()
+</script>
 
 </body>
 </html>
