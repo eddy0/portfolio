@@ -12,7 +12,7 @@
 <body>
 <header class="header">
     <nav class="header__nav nav">
-    
+
     </nav>
     <div class="header__content-box ">
         <h1 class="heading-1--name margin-bottom--sm">Eddy zhang</h1>
@@ -39,30 +39,29 @@
             <li class="ghost">R</li>
         </ul>
     </h2>
-    
+
 
 </section>
 
 
 <script>
-    
+
     const scroll = function() {
         let section = document.querySelector('.section-about')
         let text = document.querySelector('.text')
         window.addEventListener('scroll', (event) => {
-            console.log(window.scrollY ,window.innerHeight, section.offsetHeight)
             if (window.scrollY + 50  >= section.offsetHeight && window.scrollY   <= section.offsetHeight + 100  ) {
-               
+
                 text.classList.remove('hidden')
-            
+
             } else {
                 text.classList.add('hidden')
             }
-      
+
         })
-        
+
     }
-    
+
 </script>
 
 <script>
@@ -98,7 +97,7 @@
             this.animation = setInterval(() => {
                 // 正向
                 if (positive) {
-                    if (i < text.length) {
+                    if ( i < text.length) {
                         text = this.words[count]
                         let word = text[i]
                         this.box.insertAdjacentHTML('beforeend', word)
@@ -108,7 +107,7 @@
                             positive = !positive
                     }
                 } else {
-                    if (i <= text.length) {
+                    if (i>= 0 && i <= text.length) {
                         let word = text.slice(0, i)
                         this.box.innerText = ''
                         this.box.insertAdjacentHTML('beforeend', word)
@@ -123,12 +122,17 @@
                         } else {
                             count = 0
                         }
-                        setTimeout(() => {
-                            positive = true
-                        }, this.delay)
+                        positive = true
+                        // setTimeout(() => {
+                        //     positive = true
+                        //     this.animation
+                        //
+                        // }, this.delay)
                     }
                 }
             }, this.interval)
+
+
         }
     }
 </script>
@@ -140,7 +144,7 @@
         let config = {
             className: 'show',
             words: ['web developer','inspiration', 'creative', 'hardworking'],
-            interval: 150,
+            interval: 120,
             delay: 800,
             positive: true
         }
