@@ -9,5 +9,9 @@
 @import "./base/animation";
 
 @import "./component/header";
+@import "./component/about";
+@import "./component/roadmap";
+@import "./component/project";
 
-@import "./layout/home";
+
+@import "page/home";

@@ -21,10 +21,9 @@
             <p class="show">web developer</p>
         </div>
     </header>
-
-
-    <section class=" section-about">
-        <h2 class="row section-about__title heading-2">
+    
+    <section class="section-about">
+        <div class="section-about__title heading-2">
             <ul class="text hidden">
                 <li>I</li>
                 <li class="ghost spaced">A</li>
@@ -32,7 +31,7 @@
                 <li class="ghost spaced">A</li>
                 <li class="spaced">D</li>
                 <li class="ghost">E</li>
-                <li class="ghost">v</li>
+                <li class="ghost">V</li>
                 <li class="ghost">E</li>
                 <li class="ghost">L</li>
                 <li class="ghost">O</li>
@@ -40,129 +39,104 @@
                 <li class="ghost">E</li>
                 <li class="ghost">R</li>
             </ul>
-        </h2>
-        <p>I'm learn web developer skill by self-tought, I was gradiuted by economy brachelor, however, after two years working and a unexpected thought of learning coding to be more productive on my working, I was getting encourged and charmed by the world
+        </div>
+        
+        
+        <div class="section-about__box story-box row">
+            <div class="story-box__img">
+            <img src="src/img/story-1.jpg" alt="study hard"  >
+            </div>
+            <div class="story-box__text">
+        <p class="paragraph">I'm learn web developer skill by self-tought, I was gradiuted by economy brachelor, however, after two years working and a unexpected thought of learning coding to be more productive on my working, I was getting encourged and charmed by the world
             of computer.
         </p>
-        <p>After a struggle of the pain of new life and chasing what I really want to be. I decided to quit the job and get involved in the web development world.
-        </p>
-        <p>
-            Learning comes with pain, however, all i could feel achieveness. I learned vallina html, css and javascript all on the Internet and the tech books in the past one year and I felt proud of my hardworking.
-        </p>
-        <p>
-            I love coding. It's so amazing to me and it makes felt like the world is changing because of it.
-        </p>
+            </div>
+        </div>
+    
+        <div class="section-about__box story-box row">
+           
+            <div class="story-box__text">
+                <p class="paragraph">I'm learn web developer skill by self-tought, I was gradiuted by economy brachelor, however, after two years working and a unexpected thought of learning coding to be more productive on my working, I was getting encourged and charmed by the world
+                    of computer.
+                </p>
+            </div>
+            <div class="story-box__img">
+                <img src="src/img/story-2.jpg" alt="study hard"  >
+            </div>
+        </div>
+    
+        <div class="section-about__box story-box row">
+            <div class="story-box__img">
+                <img src="src/img/story-3.jpg" alt="study hard"  >
+            </div>
+            <div class="story-box__text">
+                <p class="paragraph">I'm learn web developer skill by self-tought, I was gradiuted by economy brachelor, however, after two years working and a unexpected thought of learning coding to be more productive on my working, I was getting encourged and charmed by the world
+                    of computer.
+                </p>
+            </div>
+         
+        </div>
+        
+    </section>
 
+
+    <section class="roadmap row">
+        <div class="e-text-center heading-2 mb--lg">
+            <h1 class="heading-2"> roadmap </h1>
+        </div>
+        <div class="roadmap__timeline ">
+            <div class="timeline__item">
+                <div class="timeline__img"></div>
+            <p class="timeline__text ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores ea facere laudantium nisi suscipit. Laudantium, quo vitae. Aliquid culpa cumque delectus eum fugiat id, inventore ipsa nostrum quae rerum veritatis.</p>
+            </div>
+        </div>
+        <div class="roadmap__timeline ">
+            <div class="timeline__item">
+                <div class="timeline__img"></div>
+                <p class="timeline__text ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores ea facere laudantium nisi suscipit. Laudantium, quo vitae. Aliquid culpa cumque delectus eum fugiat id, inventore ipsa nostrum quae rerum veritatis.</p>
+            </div>
+        </div>
+        <div class="roadmap__timeline ">
+            <div class="timeline__item">
+                <div class="timeline__img"></div>
+                <p class="timeline__text ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores ea facere laudantium nisi suscipit. Laudantium, quo vitae. Aliquid culpa cumque delectus eum fugiat id, inventore ipsa nostrum quae rerum veritatis.</p>
+            </div>
+        </div>
+        
+    </section>
+
+
+    <section class="project row mb--lg">
+        <div class="e-text-center heading-2 mb--lg project__title-box">
+            <h1 class="heading-2 project__title"> project </h1>
+        </div>
+        <div class="project__box">
+            <div class="project__item heading-2">
+            xxx
+            </div>
+            <div class="project__item">
+    
+            </div>
+            <div class="project__item">
+    
+            </div>
+            <div class="project__item">
+    
+            </div>
+            <div class="project__item">
+    
+            </div>
+            <div class="project__item">
+    
+            </div>
+        
+        </div>
+      
 
     </section>
 
 
-    <script>
-const scroll = function() {
-    let section = document.querySelector('.section-about')
-    let text = document.querySelector('.text')
-    window.addEventListener('scroll', (event) => {
-        if (window.scrollY + 50 >= section.offsetHeight && window.scrollY <= section.offsetHeight + 100) {
-
-            text.classList.remove('hidden')
-
-        } else {
-            text.classList.add('hidden')
-        }
-
-    })
-
-}
-    </script>
-
-    <script>
-class TextEffect {
-    constructor({
-        className,
-        words,
-        interval,
-        delay,
-        positive = true
-    }) {
-        this.className = className
-        this.words = words
-        this.interval = interval || 100
-        this.delay = delay || 500
-        this.positive = positive
-        this.init()
-    }
-    init() {
-        if (!Array.isArray(this.words)) {
-            alert('pls use array & more then one item')
-            return
-        }
-        this.box = document.querySelector(`.${this.className}`)
-        this.box.innerHTML = ''
-        this.start()
-    }
-    start() {
-        let count = 0
-        let text = this.words[count]
-        let positive = this.positive
-        let i = this.positive ? 0 : text.length
-        this.animation = setInterval(() => {
-            // 正向
-            if (positive) {
-                if (i < text.length) {
-                    text = this.words[count]
-                    let word = text[i]
-                    this.box.insertAdjacentHTML('beforeend', word)
-                    i++
-                }
-                if (i === text.length) {
-                    positive = !positive
-                }
-            } else {
-                if (i >= 0 && i <= text.length) {
-                    let word = text.slice(0, i)
-                    this.box.innerText = ''
-                    this.box.insertAdjacentHTML('beforeend', word)
-                    i--
-                }
-                if (i < 0) {
-                    // reset i
-                    i = 0
-                    // reset count
-                    if (count < this.words.length - 1) {
-                        count += 1
-                    } else {
-                        count = 0
-                    }
-                    positive = true
-                    // setTimeout(() => {
-                    //     positive = true
-                    //     this.animation
-                    //
-                    // }, this.delay)
-                }
-            }
-        }, this.interval)
-
-
-    }
-}
-    </script>
-
-    <script>
-const __main = () => {
-    let config = {
-        className: 'show',
-        words: ['web developer', 'inspiration', 'creative', 'hardworking'],
-        interval: 120,
-        delay: 800,
-        positive: true
-    }
-    new TextEffect(config)
-    scroll()
-}
-__main()
-    </script>
-
+    <script src="src/js/index.js"></script>
 </body>
 
 </html>
