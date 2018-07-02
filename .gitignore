@@ -61,6 +61,5 @@ typings/
 .next
 .idea/
 .xml
-/src/css/index.css.map
 /.sass-cache/
 
