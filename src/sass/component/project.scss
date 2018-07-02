@@ -14,6 +14,8 @@
         min-height: 50rem;
         margin-top: 2rem;
         transition: .5s all ease;
+        transform-origin: center;
+
         transform: rotateX(60deg) scale(0.7);
         border-radius: 3px;
         background-color: #fff;

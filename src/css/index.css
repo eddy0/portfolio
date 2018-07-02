@@ -53,6 +53,8 @@ section {
 .paragraph {
   font-size: 2rem;
   letter-spacing: 1px; }
+  .paragraph + .paragraph {
+    margin-top: 1rem; }
 
 .row {
   max-width: 1140px;
@@ -96,7 +98,7 @@ section {
   .header__content-box {
     position: absolute;
     left: 50%;
-    top: 40%;
+    top: 30%;
     transform: translate(-50%, -50%);
     color: aliceblue;
     animation: moveInRight 1.5s ease; }
@@ -107,18 +109,61 @@ section {
       height: 2rem;
       letter-spacing: 1px;
       padding-left: 30%; }
+  .header__link {
+    text-align: center;
+    margin-top: 5rem; }
+
+.btn {
+  display: inline-block;
+  margin: 0 2rem;
+  padding: 1rem 2rem;
+  background-color: #fff;
+  color: #333333;
+  border-radius: 6px;
+  text-transform: uppercase;
+  font-weight: 700;
+  transition: all 0.2s;
+  text-align: center;
+  border: 0;
+  outline: 0;
+  position: relative;
+  transform: translateY(3px);
+  backface-visibility: hidden; }
+  .btn:after {
+    content: '';
+    position: absolute;
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 15px;
+    left: 0;
+    top: 0;
+    opacity: 1;
+    background-color: #fff;
+    transition: all 0.4s;
+    z-index: -1; }
+  .btn:hover:after {
+    opacity: 0;
+    transform: scale(1.5); }
+  .btn:hover {
+    transform: translateY(0);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.7);
+    background-color: #88d8b0;
+    color: #fff; }
+  .btn:active {
+    transform: translateY(-2px); }
 
 .section-about {
   position: relative; }
   .section-about__title {
-    text-align: center;
-    margin: 4rem auto; }
+    text-align: center; }
 
 .story-box {
   display: flex; }
   .story-box__img {
     flex: 0 0 50%;
-    background-color: #000; }
+    background-color: #000;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.4); }
     .story-box__img img {
       width: 100%;
       height: auto;
@@ -129,49 +174,77 @@ section {
     justify-content: center;
     margin: 10%;
     position: relative; }
+    .story-box__text .paragraph span + span {
+      display: block;
+      margin-top: 2rem; }
     .story-box__text:first-child p:before {
-      content: '\201C';
-      font-size: 26rem;
-      font-family: sans-serif;
-      position: absolute;
-      left: 0;
-      top: 5rem;
-      color: #333333;
-      opacity: 0.3; }
-    .story-box__text:last-child p:after {
       content: '\201E';
-      font-size: 26rem;
+      font-size: 20rem;
+      font-family: sans-serif;
+      position: absolute;
+      right: 2rem;
+      top: -2rem;
+      color: #333333;
+      opacity: 0.2;
+      line-height: 1; }
+    .story-box__text:last-child p:after {
+      content: '\201C';
+      font-size: 21rem;
       font-family: sans-serif;
       position: absolute;
       left: 0;
-      top: 5rem;
+      top: 8rem;
       color: #333333;
-      opacity: 0.3; }
+      opacity: 0.2;
+      line-height: 1; }
 
-.section-about .text {
+.section-about .title__list {
   border-bottom: 0;
   display: flex;
   align-items: center;
   justify-content: center; }
-.section-about .text.hidden li {
-  border-bottom: 1px solid #ddd; }
-.section-about .text li {
-  display: inline-block;
-  float: left;
-  font-weight: 300;
-  font-size: 4rem;
-  color: #333;
-  opacity: 1;
-  transition: all 0.5s ease-in-out;
-  max-width: 5rem; }
-.section-about .text.hidden li.spaced {
+  .section-about .title__list li {
+    display: inline-block;
+    float: left;
+    color: #333;
+    opacity: 1;
+    transition: all 0.5s ease-in-out;
+    max-width: 100%; }
+.section-about .title__list.hidden .front {
+  opacity: 1; }
+.section-about .title__list .front {
+  opacity: 0; }
+.section-about .title__list.hidden li {
+  border-bottom: 2px solid #ddd; }
+.section-about .title__list.hidden li.ghost.spaced {
   padding-left: 0; }
-.section-about .text li.spaced {
-  padding-left: 0.5em; }
-.section-about .text.hidden li.ghost {
+.section-about .title__list li.spaced {
+  padding-left: 2rem; }
+.section-about .title__list.hidden li.ghost {
   opacity: 0;
   max-width: 0; }
 
+.roadmap:hover .roadmap__title::before, .roadmap:hover .roadmap__title::after {
+  opacity: 1;
+  animation: road 2s linear infinite;
+  transform: translateY(-10px); }
+.roadmap__title {
+  position: relative; }
+  .roadmap__title::before, .roadmap__title::after {
+    content: '';
+    position: absolute;
+    height: 7px;
+    left: 0;
+    right: 0;
+    transition: all 0.3s ease;
+    opacity: 0; }
+  .roadmap__title::before {
+    bottom: -34px;
+    animation: road 0.9s infinite linear;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAUoAAAAHBAMAAACcthkwAAAAD1BMVEUAAAD/vwD/vwD/vwD/vwBYa2Z+AAAABHRSTlMAwEAw9JyPcwAAAC1JREFUOMtjcMEETgwQwIJFTgEiRWdto64cdeWoK8l2pSAmEIZKMWKRMxgQbQCWVcU78Wj7hwAAAABJRU5ErkJggg==); }
+  .roadmap__title::after {
+    bottom: -18px;
+    background-color: #ffbf00; }
 .roadmap__timeline {
   display: flex;
   flex-direction: column;
@@ -212,6 +285,11 @@ section {
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
     animation: breath 3s ease infinite; }
 
+@keyframes road {
+  from {
+    background-position: 0; }
+  to {
+    background-position: -330px; } }
 .project__box {
   display: flex;
   flex-wrap: wrap;
@@ -224,6 +302,7 @@ section {
   min-height: 50rem;
   margin-top: 2rem;
   transition: .5s all ease;
+  transform-origin: center;
   transform: rotateX(60deg) scale(0.7);
   border-radius: 3px;
   background-color: #fff;
@@ -306,8 +385,8 @@ section {
   -webkit-background-size: cover;
   background-size: cover;
   background-attachment: fixed;
-  -webkit-clip-path: polygon(100% 0, 100% 100%, 50% 95%, 0 100%, 0 0);
-  clip-path: polygon(100% 0, 100% 100%, 50% 95%, 0 100%, 0 0);
+  clip-path: polygon(100% 0, 100% 100%, 50% 70%, 0 100%, 0 0);
+  -webkit-clip-path: polygon(100% 0, 100% 100%, 50% 70%, 0 100%, 0 0);
   color: #fff; }
 
 .roadmap {

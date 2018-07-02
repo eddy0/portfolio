@@ -6,19 +6,20 @@
 
     &__title {
         text-align: center;
-        margin: 4rem auto;
     }
 
     &__box {
 
     }
 }
+
 .story-box {
     display: flex;
 
     &__img {
         flex: 0 0 50%;
         background-color: #000;
+        box-shadow: 0 3px 5px rgba(black, 0.4);
 
         & img {
             width: 100%;
@@ -36,26 +37,35 @@
         margin: 10%;
         position: relative;
 
+        .paragraph {
+            span + span {
+                display: block;
+                margin-top: 2rem;
+            }
+        }
+
         &:first-child p:before {
-            content: '\201C';
-            font-size: 26rem;
+            content: '\201E';
+            font-size: 20rem;
             font-family: sans-serif;
             position: absolute;
-            left: 0;
-            top: 5rem;
+            right: 2rem;
+            top: -2rem;
             color: #333333;
-            opacity: 0.3;
+            opacity: 0.2;
+            line-height: 1;
         }
 
         &:last-child p:after {
-            content: '\201E';
-            font-size: 26rem;
+            content: '\201C';
+            font-size: 21rem;
             font-family: sans-serif;
             position: absolute;
             left: 0;
-            top: 5rem;
+            top: 8rem;
             color: #333333;
-            opacity: 0.3;
+            opacity: 0.2;
+            line-height: 1;
         }
 
 
@@ -65,35 +75,43 @@
 
 
 .section-about {
-
-    .text {
+    .title__list {
         border-bottom: 0;
         display: flex;
         align-items: center;
         justify-content: center;
+
+        & li {
+            display: inline-block;
+            float: left;
+            color: #333;
+            opacity: 1;
+            transition: all 0.5s ease-in-out;
+            max-width: 100%;
+        }
     }
 
-    .text.hidden li {
-        border-bottom: 1px solid #ddd;
-    }
-    .text li {
-        display: inline-block;
-        float: left;
-        font-weight: 300;
-        font-size: 4rem;
-        color: #333;
+    .title__list.hidden .front{
         opacity: 1;
-        transition: all 0.5s ease-in-out;
-        max-width: 5rem;
     }
-    .text.hidden li.spaced {
+
+    .title__list .front{
+        opacity: 0;
+    }
+
+    .title__list.hidden li {
+        border-bottom: 2px solid #ddd;
+    }
+
+    .title__list.hidden li.ghost.spaced {
         padding-left: 0;
     }
-    .text li.spaced {
-        padding-left: 0.5em;
+
+    .title__list li.spaced {
+        padding-left: 2rem;
     }
 
-    .text.hidden li.ghost {
+    .title__list.hidden li.ghost {
         opacity: 0;
         max-width: 0;
     }

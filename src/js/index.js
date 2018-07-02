@@ -1,6 +1,6 @@
 const scroll = function() {
         let section = document.querySelector('.section-about')
-        let text = document.querySelector('.text')
+        let text = document.querySelector('.section-about .title__list')
         window.addEventListener('scroll', (event) => {
             console.log('section.offsetHeight', section.offsetHeight, window.scrollY, section.offsetTop)
             if(window.scrollY + 200 >= section.offsetTop && window.scrollY <= section.offsetTop ) {

@@ -4,13 +4,10 @@ my own portolio
 
 about me
 
-I'm learn web developer skill by self-tought, I was gradiuted by economy brachelor, however, after two years working and a unexpected thought of learning coding to be more productive on my working, I was getting encourged and charmed by the world of computer.
-
-After a struggle of the pain of new life and chasing what I really want to be. I decided to quit the job and get involved in the web development world.
-
-Learning comes with pain, however, all i could feel achieveness. I learned vallina html, css and javascript all on the Internet and the tech books in the past one year and I felt proud of my hardworking.
-
-I love coding. It's so amazing to me and it makes felt like the world is changing because of it.
+    - I was graduated for the degree of an economy bachelor. However, after a year's working and due to a whim of learning code in order to to be more productive on my job, I was then impressed on how amazing coding is and felt like it is changing the world!
+    - After struggling between the peaceful of current life or chasing what I really want to be, I quit the previous job and started to be involved with my web developer learning career.
+    - I learned HTML, CSS and valina Javascript, and React on online resource (udemey, youtube) and the tech books.Learning always comes with challenge and pain, especially the new world. However, all I could feel is exciting and the sense of accomplishment when I write a project or demo.
+               
 
 
 roadmap

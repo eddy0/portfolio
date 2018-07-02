@@ -15,7 +15,8 @@
             letter-spacing: 1px;
             font-weight: 300;
             font-family: $font-display;
-            background: linear-gradient(110deg, #ffeead 33%, rgba(0, 0, 0, 0) 33%), linear-gradient(110deg, #C5E7D7 34%, #88d8b0 34%); -webkit-background-clip: text;
+            background: linear-gradient(110deg, #ffeead 33%, rgba(0, 0, 0, 0) 33%), linear-gradient(110deg, #C5E7D7 34%, #88d8b0 34%);
+            -webkit-background-clip: text;
             background-size: 400%;
             color: transparent;
             animation: name 5s ease infinite;
@@ -40,5 +41,9 @@
 .paragraph {
     font-size: 2rem;
     letter-spacing: 1px;
+
+    & + & {
+        margin-top: 1rem;
+    }
 }
 

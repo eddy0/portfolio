@@ -1,5 +1,40 @@
 .roadmap {
 
+    // toggle road map
+    &:hover &__title {
+        &::before, &::after {
+            opacity: 1;
+            animation: road 2s linear infinite;
+            transform: translateY(-10px);
+        }
+    }
+
+    &__title {
+        position: relative;
+
+        &::before, &::after {
+            content: '';
+            position: absolute;
+            height: 7px;
+            left: 0;
+            right: 0;
+            transition: all 0.3s ease;
+            opacity: 0;
+        }
+
+        &::before {
+            bottom: -34px;
+            animation: road 0.9s infinite linear;
+            background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAUoAAAAHBAMAAACcthkwAAAAD1BMVEUAAAD/vwD/vwD/vwD/vwBYa2Z+AAAABHRSTlMAwEAw9JyPcwAAAC1JREFUOMtjcMEETgwQwIJFTgEiRWdto64cdeWoK8l2pSAmEIZKMWKRMxgQbQCWVcU78Wj7hwAAAABJRU5ErkJggg==);
+        }
+
+        &::after {
+            bottom: -18px;
+            background-color: #ffbf00;
+        }
+
+    }
+
     &__timeline {
         display: flex;
         flex-direction: column;
@@ -52,3 +87,12 @@
     }
 }
 
+
+@keyframes road {
+    from{
+        background-position: 0;
+    }
+    to{
+        background-position: -330px;
+    }
+}
