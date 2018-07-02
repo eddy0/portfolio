@@ -2,7 +2,8 @@ const scroll = function() {
         let section = document.querySelector('.section-about')
         let text = document.querySelector('.text')
         window.addEventListener('scroll', (event) => {
-            if(window.scrollY + 50 >= section.offsetHeight && window.scrollY <= section.offsetHeight + 100) {
+            console.log('section.offsetHeight', section.offsetHeight, window.scrollY, section.offsetTop)
+            if(window.scrollY + 200 >= section.offsetTop && window.scrollY <= section.offsetTop ) {
                 
                 text.classList.remove('hidden')
                 
@@ -91,8 +92,8 @@ class TextEffect {
 const __main = () => {
     let config = {
         className: 'show',
-        words: ['web developer', 'inspiration', 'creative', 'hardworking'],
-        interval: 120,
+        words: ['passion', 'inspiration', 'creative'],
+        interval: 150,
         delay: 800,
         positive: true,
     }

@@ -33,18 +33,22 @@ section {
   letter-spacing: 1px; }
   .heading-1--name {
     font-size: 4.5rem;
+    letter-spacing: 1px;
+    font-weight: 300;
     font-family: "Pacifico", "Arial", sans-serif;
     background: linear-gradient(110deg, #ffeead 33%, rgba(0, 0, 0, 0) 33%), linear-gradient(110deg, #C5E7D7 34%, #88d8b0 34%);
     -webkit-background-clip: text;
-    background-size: 30% 50%;
-    color: transparent; }
+    background-size: 400%;
+    color: transparent;
+    animation: name 5s ease infinite; }
 .heading-2 {
   font-size: 4rem;
   font-weight: 300;
   text-transform: uppercase; }
 .heading-3 {
   font-size: 1.6rem;
-  font-weight: 300; }
+  font-weight: 400;
+  font-family: "Pacifico", "Arial", sans-serif; }
 
 .paragraph {
   font-size: 2rem;
@@ -68,11 +72,11 @@ section {
 
 @keyframes name {
   0% {
-    background-position: 10% 40%; }
+    background-position: 10% 30%; }
   50% {
-    background-position: 25% 40%; }
+    background-position: 25% 30%; }
   100% {
-    background-position: 10% 40%; } }
+    background-position: 10% 30%; } }
 @keyframes moveInRight {
   from {
     transform: translate(-80%, -50%);
@@ -155,11 +159,11 @@ section {
   display: inline-block;
   float: left;
   font-weight: 300;
-  font-size: 2em;
+  font-size: 4rem;
   color: #333;
   opacity: 1;
   transition: all 0.5s ease-in-out;
-  max-width: 2em; }
+  max-width: 5rem; }
 .section-about .text.hidden li.spaced {
   padding-left: 0; }
 .section-about .text li.spaced {
