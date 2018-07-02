@@ -13,8 +13,7 @@ const scroll = function() {
         })
         
     }
-
-
+    
 
 class TextEffect {
     constructor({
