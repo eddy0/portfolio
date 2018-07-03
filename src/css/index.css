@@ -36,6 +36,7 @@ section {
   letter-spacing: 1px; }
   .heading-1--name {
     font-size: 4.5rem;
+    padding: 2rem;
     letter-spacing: 1px;
     font-weight: 300;
     font-family: "Pacifico", "Arial", sans-serif;
