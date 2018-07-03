@@ -12,6 +12,16 @@
 
 }
 
+@keyframes road {
+    from{
+        background-position: 0;
+    }
+    to{
+        background-position: -330px;
+    }
+}
+
+
 
 @keyframes moveInRight {
     from {

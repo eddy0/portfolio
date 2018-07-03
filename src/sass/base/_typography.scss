@@ -35,6 +35,19 @@
         font-family: $font-display;
     }
 
+    &-title {
+        font-family: 'Josefin Sans', sans-serif;
+        color: #54483A;
+        font-weight: 400;
+        font-size: 2.6rem;
+        font-style: italic;
+        line-height: 1;
+
+        &--light {
+            color: #fff;
+        }
+    }
+
 
 }
 
@@ -45,5 +58,24 @@
     & + & {
         margin-top: 1rem;
     }
+}
+
+.timeline__text__header {
+    font-family: 'Josefin Sans', sans-serif;
+    color: #54483A;
+    font-weight: 400;
+    font-size: 2.6rem;
+    font-style: italic;
+    line-height: 1;
+ }
+
+
+.timeline__text__body {
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.2;
+    font-style: italic;
+
+
 }
 

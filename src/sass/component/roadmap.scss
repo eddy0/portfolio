@@ -35,11 +35,6 @@
 
     }
 
-    &__timeline {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
 }
 
 // animation
@@ -97,7 +92,8 @@
 
 
     &__text {
-        flex: 0 0 50%;
+        width: 100%;
+        margin-left: 20%;
         position: relative;
         font-size: 2rem;
         border-radius: 5px;
@@ -114,11 +110,3 @@
 }
 
 
-@keyframes road {
-    from{
-        background-position: 0;
-    }
-    to{
-        background-position: -330px;
-    }
-}
