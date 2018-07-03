@@ -1,6 +1,6 @@
 .header {
     height: 100vh;
-    background-image: linear-gradient(to right, rgba(black, 0.8), rgba(black, 0.6)), url('../img/bg1.jpg') ;
+    background-image: linear-gradient(to right, rgba(black, 0.8), rgba(black, 0.6)), url('../img/bg1-1x.jpg') ;
     background-position: center;
     -webkit-background-size: cover;
     background-size: cover;
@@ -8,6 +8,7 @@
     clip-path: polygon(100% 0, 100% 100%, 50% 70%, 0 100%, 0 0);
     -webkit-clip-path: polygon(100% 0, 100% 100%, 50% 70%, 0 100%, 0 0);
     color: #fff;
+
 
 
 }
