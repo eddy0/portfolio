@@ -16,11 +16,11 @@ const scroll = function() {
 
     }
 
-    const ScrolltoShowroadMap = function() {
+    const scrolltoShowroadMap = function({offset=350}) {
             let boxes = document.querySelectorAll('.roadmap__timeline')
             boxes.forEach((box) => {
                 window.addEventListener('scroll', (event) => {
-                    if(window.scrollY + 250 >= box.offsetTop) {
+                    if(window.scrollY + offset >= box.offsetTop) {
                         box.classList.add('map--active')
                     }
                 })
@@ -110,8 +110,12 @@ const __main = () => {
         positive: true,
     }
     new TextEffect(config)
+    // title back and front
     scroll()
-    ScrolltoShowroadMap()
+    // road map scroll to show
+    scrolltoShowroadMap({
+        offset: 400,
+    })
 }
 
 
