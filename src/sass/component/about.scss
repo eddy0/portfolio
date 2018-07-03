@@ -80,40 +80,60 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        position: relative;
 
         & li {
             display: inline-block;
             float: left;
             color: #333;
             opacity: 1;
-            transition: all 0.5s ease-in-out;
+            transition: all 0.3s ease, opacity 0s;
             max-width: 100%;
         }
     }
 
-    .title__list.hidden .front{
-        opacity: 1;
-    }
-
-    .title__list .front{
-        opacity: 0;
-    }
-
-    .title__list.hidden li {
+    .title__list li {
         border-bottom: 2px solid #ddd;
     }
 
-    .title__list.hidden li.ghost.spaced {
+    .title__list .front{
+        opacity: 1;
+    }
+
+    .title__list .ghost{
+        opacity: 0;
+    }
+
+    .title__list li.ghost.spaced {
         padding-left: 0;
     }
 
-    .title__list li.spaced {
+    .title__list li.spaced, .title__list.title--show li.ghost.spaced {
         padding-left: 2rem;
     }
 
-    .title__list.hidden li.ghost {
+    .title__list li.ghost {
         opacity: 0;
         max-width: 0;
+    }
+
+    .title__list.title--show li.ghost {
+        opacity: 1;
+        max-width: 100%;
+    }
+
+    .title__list.title--show li.front {
+        opacity: 0;
+        max-width: 0;
+    }
+
+    .title__list.title--show:after {
+        content: 'ss';
+        display:block;
+        position: absolute;
+        top:0;
+        left: 0;
+
     }
 
 }

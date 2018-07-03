@@ -27,12 +27,52 @@
 
 @keyframes breath {
     0% {
-        transform: scale(0.8);
+        transform: translate(-50%, -50%) scale(0.8);
     }
     50% {
-        transform: scale(1.2);
+        transform: translate(-50%, -50%) scale(1.2);
     }
     100% {
-        transform: scale(0.8);
+        transform:translate(-50%, -50%) scale(0.8);
+    }
+}
+
+
+
+@keyframes entry {
+    0% {
+        top: -20%;
+        opacity: 0.1;
+    }
+
+    100% {
+        top: 0;
+    }
+}
+@keyframes rotate {
+    from {
+        transform: rotate(0);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+@keyframes chicaum {
+    from {
+        transform: translate(0px);
+    }
+
+    to {
+        transform: translate(-886px);
+    }
+}
+@-webkit-keyframes chicadois {
+    from {
+        transform: translate(0px);
+    }
+
+    to {
+        transform: translate(-841px);
     }
 }

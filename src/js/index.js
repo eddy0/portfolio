@@ -1,20 +1,32 @@
+const log = console.log.bind(console)
+
 const scroll = function() {
         let section = document.querySelector('.section-about')
         let text = document.querySelector('.section-about .title__list')
         window.addEventListener('scroll', (event) => {
-            console.log('section.offsetHeight', section.offsetHeight, window.scrollY, section.offsetTop)
+            // console.log('section.offsetHeight', section.offsetHeight, window.scrollY, section.offsetTop)
             if(window.scrollY + 200 >= section.offsetTop && window.scrollY <= section.offsetTop ) {
-                
-                text.classList.remove('hidden')
-                
+                text.classList.add('title--show')
+
             } else {
-                text.classList.add('hidden')
+                text.classList.remove('title--show')
             }
-            
+
         })
-        
+
     }
-    
+
+    const ScrolltoShowroadMap = function() {
+            let boxes = document.querySelectorAll('.roadmap__timeline')
+            boxes.forEach((box) => {
+                window.addEventListener('scroll', (event) => {
+                    if(window.scrollY + 250 >= box.offsetTop) {
+                        box.classList.add('map--active')
+                    }
+                })
+            })
+        }
+
 
 class TextEffect {
     constructor({
@@ -31,7 +43,7 @@ class TextEffect {
         this.positive = positive
         this.init()
     }
-    
+
     init() {
         if(!Array.isArray(this.words)) {
             alert('pls use array & more then one item')
@@ -41,7 +53,7 @@ class TextEffect {
         this.box.innerHTML = ''
         this.start()
     }
-    
+
     start() {
         let count = 0
         let text = this.words[count]
@@ -84,7 +96,7 @@ class TextEffect {
                 }
             }
         }, this.interval)
-        
+
     }
 }
 
@@ -99,6 +111,7 @@ const __main = () => {
     }
     new TextEffect(config)
     scroll()
+    ScrolltoShowroadMap()
 }
 
 
