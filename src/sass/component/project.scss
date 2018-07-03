@@ -23,7 +23,12 @@
         justify-content: space-evenly;
         perspective: 3000px;
         backface-visibility: hidden;
+
+        @include respond(phone) {
+            display: block;
+        }
     }
+
 
     &__title {
         position: relative;
@@ -66,25 +71,58 @@
 
     &__item {
         flex: 0 0 30%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         backface-visibility: hidden;
-        //box-shadow: 0 1rem 3rem rgba(black, 0.3);
-        min-height: 50rem;
-        margin-top: 2rem;
+        margin-top: 5rem;
+        min-height: 30rem;
         transition: 0.5s all ease;
         transform-origin: center;
         transform: rotateX(60deg) scale(0.7);
-        border-radius: 3px;
+        border-radius: 5px;
         background-color: #fff;
         background: linear-gradient(to bottom, #59476f 30%, #7b88d1 100%);
-        box-shadow: 0 20px 50px #555;
+        box-shadow: 0 2rem 5rem #555;
         animation: entry 1s linear 1;
         color: #fff;
+
+        @include respond(pad) {
+            transform: none;
+            width:23rem;
+            margin-right: 2rem;
+            margin-left: 2rem;
+        }
+
+
+        @include respond(phone) {
+            transform: none;
+            width:30rem;
+            margin-left:  auto;
+            margin-right: auto ;
+        }
+
+
 
         &:hover {
             cursor: pointer;
             transform: rotate(0deg) scale(1);
             transition: 0.5s all ease;
             z-index: 400;
+        }
+
+        & > .project__text {
+            padding: 2rem;
+            text-align: center;
+            max-width: 80%;
+            @include respond(pad) {
+                max-width: 80%;
+            }
+        }
+
+        &> * {
+          margin-top: 2rem;
         }
     }
 }

@@ -20,6 +20,10 @@
             background-size: 400%;
             color: transparent;
             animation: name 5s ease infinite;
+
+            @include respond(phone) {
+                font-size: 3rem;
+            }
         }
     }
 
@@ -27,12 +31,17 @@
         font-size: 4rem;
         font-weight: 300;
         text-transform: uppercase;
+
+        @include respond(pad) {
+            font-size: 2.5rem;
+        }
     }
 
     &-3 {
         font-size: 1.6rem;
         font-weight: 400;
         font-family: $font-display;
+
     }
 
     &-title {
@@ -55,6 +64,10 @@
     font-size: 2rem;
     letter-spacing: 1px;
 
+    @include respond(pad) {
+        font-size: 1.6rem;
+    }
+
     & + & {
         margin-top: 1rem;
     }
@@ -70,12 +83,10 @@
  }
 
 
-.timeline__text__body {
+.timeline__text__body, .project__text {
     font-family: 'Nunito', sans-serif;
     font-size: 1.6rem;
     line-height: 1.2;
     font-style: italic;
-
-
 }
 

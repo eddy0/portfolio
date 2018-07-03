@@ -10,6 +10,10 @@ html {
     font-size: 62.5%;
     font-weight: 400;
     text-rendering: optimizeLegibility;
+
+    @include respond(phone) {
+        font-size:50%;
+    }
 }
 
 body {

@@ -1,11 +1,6 @@
 .header {
     position: relative;
 
-    &__nav {
-
-
-    }
-
     &__content-box {
         position: absolute;
         left: 50%;
@@ -37,6 +32,7 @@
     display: inline-block;
     margin: 0 2rem;
     padding: 1rem 2rem;
+    min-width: 8rem;
     background-color: #fff;
     color: #333333;
     border-radius: 6px;
@@ -49,6 +45,11 @@
     position: relative;
     transform: translateY(3px);
     backface-visibility: hidden;
+
+
+    @include respond(phone) {
+        margin:1rem;
+    }
 
     &:after {
         content: '';

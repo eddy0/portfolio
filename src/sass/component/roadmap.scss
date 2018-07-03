@@ -74,6 +74,9 @@
         left: 10%;
         top: 0;
         transition: all 0.8s ease;
+        @include respond(img) {
+            left: 6%;
+        }
 
         &::before {
             content: '';
@@ -102,7 +105,9 @@
         opacity: 0;
         transform: translateX(-10%);
         transition: all 0.4s cubic-bezier(.16,.34,.45,2.01);
-
+        @include respond(img) {
+            margin-left: 10%;
+        }
 
     }
 

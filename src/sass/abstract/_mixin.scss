@@ -11,6 +11,12 @@
 }
 
 @mixin respond($bp) {
+    @if( $bp == img) {
+        @media (max-width: 28.5em) {
+            @content
+        }
+    }
+
     //600 px
     @if( $bp == phone) {
         @media (max-width: 37.5em) {

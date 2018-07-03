@@ -2,6 +2,14 @@
 .row {
     max-width: 1140px;
     margin: 0 auto;
+
+}
+
+.img--hide {
+    @include respond(img) {
+        display: none;
+    }
+
 }
 
 .e-text-center {

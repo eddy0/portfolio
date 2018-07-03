@@ -19,11 +19,28 @@
 
 .story-box {
     display: flex;
+    align-items: center;
+    @include respond(pad) {
+        margin-top: 5rem;
+    }
+
+    @include respond(img) {
+       flex-direction: column;
+    }
 
     &__img {
         flex: 0 0 50%;
         background-color: #000;
         box-shadow: 0 3px 5px rgba(black, 0.4);
+
+        @include respond(pad) {
+            flex: 0 0 30%;
+        }
+
+        @include respond(img) {
+            width: 80%;
+            margin: 2rem 0;
+        }
 
         & img {
             width: 100%;
@@ -38,8 +55,13 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        margin: 10%;
+        margin: 0 10%;
         position: relative;
+
+        @include respond(pad) {
+            margin: 0 5%;
+        }
+
 
         .paragraph {
             span + span {
@@ -58,6 +80,9 @@
             color: #333333;
             opacity: 0.2;
             line-height: 1;
+            @include respond(pad) {
+                top: -12rem;
+            }
         }
 
         &:last-child p:after {
@@ -70,6 +95,10 @@
             color: #333333;
             opacity: 0.2;
             line-height: 1;
+            @include respond(pad) {
+                top: 2rem;
+            }
+
         }
 
 
@@ -116,6 +145,9 @@
 
     .title__list li.spaced, .title__list.title--show li.ghost.spaced {
         padding-left: 2rem;
+        @include respond(pad) {
+            padding-left: 1rem;
+        }
     }
 
     .title__list li.ghost {
@@ -155,13 +187,12 @@
         display: block;
         position: absolute;
         bottom: -20px;
-        right: -6rem;
+        right: -3rem;
         width: 40px;
         height: 50px;
         border-style: solid;
         border-color: lightcoral;
         border-width: 0 10px 10px 0;
-
     }
 
 }
